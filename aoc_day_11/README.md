@@ -27,7 +27,7 @@ The design supports the construction of a reverse graph in hardware (with some m
 
 ### Architecture
 
-The architecture consists of nodes/functional units organized at two levels of hierarchy - bank level and router level. Each node represents a vertice in the graph, and nodes within the same bank are connected by a "bus". Banks are connected to one another via a 2d-mesh of routers. This is done to reduce fanout at the node level, and address timing/dynamic power concerns as the scale of the graph increases. Ideally, all the nodes would be connected on a single wide bus to maximize parallelism and reduce latency but this is not practical.
+The architecture consists of nodes/functional units in a network on chip (NOC) organized at two levels of hierarchy - bank level and router level. Each node represents a vertice in the graph, and nodes within the same bank are connected by a "bus". Banks are connected to one another via a 2d-mesh of routers. This is done to reduce fanout at the node level, and address timing/dynamic power concerns as the scale of the graph increases. Ideally, all the nodes would be connected on a single wide bus to maximize parallelism and reduce latency but this is not practical.
 
 The design is parametrizable, currently it is sized as a 5x5 mesh, and each router in it has a local port connecting to a bank of 32 nodes. This supports 25*32 = 800 nodes, which supports the ~500 nodes that are given in the problem with some additional space for normalization.
 
