@@ -1,0 +1,7 @@
+(library
+ (name aoc_1_test)
+ (libraries core hardcaml aoc_1 hardcaml_test_harness
+   hardcaml_waveterm re)
+ (preprocess
+  (pps ppx_hardcaml ppx_jane))
+ (inline_tests (deps puzzle_input.txt)))
