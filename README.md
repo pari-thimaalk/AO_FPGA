@@ -1,0 +1,1 @@
+Refer to READMEs in respective puzzle folders for test instructions and HDL description.
